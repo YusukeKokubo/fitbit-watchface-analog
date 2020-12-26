@@ -4,24 +4,24 @@ import document from "document";
 // Tick every second
 clock.granularity = "seconds";
 
-let hourHand = document.getElementById("hours") as any;
-let minHand = document.getElementById("mins") as any;
-let secHand = document.getElementById("secs") as any;
+let hourHand = document.getElementById("hours") as GroupElement;
+let minHand = document.getElementById("mins") as GroupElement;
+let secHand = document.getElementById("secs") as GroupElement;
 
 // Returns an angle (0-360) for the current hour in the day, including minutes
-function hoursToAngle(hours, minutes) {
+function hoursToAngle(hours: number, minutes: number) {
   let hourAngle = (360 / 12) * hours;
   let minAngle = (360 / 12 / 60) * minutes;
   return hourAngle + minAngle;
 }
 
 // Returns an angle (0-360) for minutes
-function minutesToAngle(minutes) {
+function minutesToAngle(minutes: number) {
   return (360 / 60) * minutes;
 }
 
 // Returns an angle (0-360) for seconds
-function secondsToAngle(seconds) {
+function secondsToAngle(seconds: number) {
   return (360 / 60) * seconds;
 }
 
