@@ -5,12 +5,6 @@
   text-length: 32;
 }
 
-#background {
-  width: 100%;
-  height: 100%;
-  fill: white;
-}
-
 .hours {
   fill: white;
 }
@@ -19,50 +13,34 @@
   fill: white;
 }
 
+.hourtext {
+  font-size: 36;
+  font-family: System-Light;
+}
+
 .accentcolour {
   fill: red;
-}
-
-.statsicon {
-  x: 50%-17;
-  y: 18%;
-  width: 34;
-  height: 34;
-}
-
-.statsfield {
-  x: 50%+1;
-  y: 76%;
-  text-anchor: middle;
-  font-family: Seville-Regular;
-  font-size: 26;
-}
-
-.maindialtwelve {
-  y: -48%;
-  width: 2;
-  height: 20;
 }
 
 .maindialquarter {
   x: 0%-1;
   y: -48%;
   width: 3;
-  height: 20;
+  height: 10;
 }
 
 .maindialfive {
   x: 0%-1;
   y: -48%;
   width: 3;
-  height: 15;
+  height: 10;
 }
 
 .maindialminute {
   x: 0%-1;
   y: -48%;
-  width: 3;
-  height: 5;
+  width: 2;
+  height: 2;
 }
 
 .daymonthtext {
