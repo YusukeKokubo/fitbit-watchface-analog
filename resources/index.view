@@ -2,16 +2,16 @@
   <defs>
     <symbol id="maindial">
       <g transform="rotate(0)">
-        <rect class="maindialquarter markercolour" />
+        <rect class="maindialfive markercolour" />
       </g>
       <g transform="rotate(90)">
-        <rect class="maindialquarter markercolour" />
+        <rect class="maindialfive markercolour" />
       </g>
       <g transform="rotate(180)">
-        <rect class="maindialquarter markercolour" />
+        <rect class="maindialfive markercolour" />
       </g>
       <g transform="rotate(270)">
-        <rect class="maindialquarter markercolour" />
+        <rect class="maindialfive markercolour" />
       </g>
 
       <g transform="rotate(30)">
