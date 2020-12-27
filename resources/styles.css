@@ -7,8 +7,10 @@
 }
 
 .hourtext {
-  font-size: 36;
-  font-family: System-Light;
+  font-size: 40;
+  text-length: 2;
+  font-family: System-Regular;
+  text-anchor: middle;
 }
 
 .accentcolour {

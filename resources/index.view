@@ -186,21 +186,21 @@
     </symbol>
   </defs>
 
+  <text id="test-text1" class="hourtext markercolour">1</text>
+  <text id="test-text2" class="hourtext markercolour">2</text>
+  <text id="test-text3" class="hourtext markercolour">3</text>
+  <text id="test-text4" class="hourtext markercolour">4</text>
+  <text id="test-text5" class="hourtext markercolour">5</text>
+  <text id="test-text6" class="hourtext markercolour">6</text>
+  <text id="test-text7" class="hourtext markercolour">7</text>
+  <text id="test-text8" class="hourtext markercolour">8</text>
+  <text id="test-text9" class="hourtext markercolour">9</text>
+  <text id="test-text10" class="hourtext markercolour">10</text>
+  <text id="test-text11" class="hourtext markercolour">11</text>
+  <text id="test-text12" class="hourtext markercolour">12</text>
+
   <!-- Clock Face -->
   <g transform="translate(50%,50%)">
-    <text x="-5%" y="-33%" class="markercolour hourtext">12</text>
-    <text x="+18%" y="-28%" class="markercolour hourtext">1</text>
-    <text x="+31%" y="-15%" class="markercolour hourtext">2</text>
-    <text x="+36%" y="+3%" class="markercolour hourtext">3</text>
-    <text x="+31%" y="+22%" class="markercolour hourtext">4</text>
-    <text x="+18%" y="+35%" class="markercolour hourtext">5</text>
-    <text x="-3%" y="+40%" class="markercolour hourtext">6</text>
-    <text x="-22%" y="+35%" class="markercolour hourtext">7</text>
-    <text x="-36%" y="+22%" class="markercolour hourtext">8</text>
-    <text x="-42%" y="+3%" class="markercolour hourtext">9</text>
-    <text x="-37%" y="-16%" class="markercolour hourtext">10</text>
-    <text x="-23%" y="-29%" class="markercolour hourtext">11</text>
-
     <g id="mins" pointer-events="visible">
       <line x1="0" y1="4%" x2="0" y2="-40%" stroke-width="5" class="markercolour" />
     </g>
@@ -213,7 +213,6 @@
     <use href="#maindial" />
     <circle id="outercenterdot" cx="0" cy="0" r="6" class="accentcolour" />
     <circle id="innercenterdot" cx="0" cy="0" r="3" class="markercolour" />
-
   </g>
 
 </svg>
