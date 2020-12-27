@@ -2,6 +2,8 @@ import clock from "clock";
 import document from "document";
 import * as simpleHRM from "./simple/hrm";
 import { battery } from "power";
+import * as util from "./simple/utils";
+import { days} from "./simple/locales/en.js";
 
 // Tick every second
 clock.granularity = "seconds";
@@ -15,6 +17,7 @@ let imgHRM = iconHRM.getElementById("icon") as ImageElement;
 let txtHRM = document.getElementById("txtHRM") as GraphicsElement;
 
 let textBattery = document.getElementById("txtBattery") as GraphicsElement
+let textDate = document.getElementById("txtDate") as GraphicsElement
 
 // Returns an angle (0-360) for the current hour in the day, including minutes
 function hoursToAngle(hours: number, minutes: number) {
@@ -43,6 +46,10 @@ function updateClock() {
   hourHand.groupTransform.rotate.angle = hoursToAngle(hours, mins);
   minHand.groupTransform.rotate.angle = minutesToAngle(mins);
   secHand.groupTransform.rotate.angle = secondsToAngle(secs);
+
+  let dayName = days[today.getDay()];
+  let dayNumber = util.zeroPad(today.getDate());
+  textDate.text = `${dayName} ${dayNumber}`
 }
 
 // Update the clock every tick event
@@ -95,7 +102,7 @@ function hrmCallback(data) {
   if (data.zone === "out-of-range") {
     imgHRM.href = "images/heart_open.png";
   } else {
-    imgHRM.href = "images/heart_solid.png";
+    imgHRM.href = "images/heart_open.png";
   }
   if (data.bpm !== "--") {
     iconHRM.animate("highlight");

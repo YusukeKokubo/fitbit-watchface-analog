@@ -39,6 +39,7 @@
   fill: white;
   text-length: 4;
   text-anchor: start;
+  font-size: 26;
 }
 
 #iconHRM {
@@ -48,9 +49,17 @@
 }
 
 .battery {
-  text-length: 4;
+  font-size: 26;
+  text-length: 2;
+  text-anchor: end;
 }
 
 .battery-percent {
   font-size: 22;
+}
+
+.Date {
+  font-size: 24;
+  text-anchor: middle;
+  text-length: 6;
 }

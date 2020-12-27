@@ -215,9 +215,11 @@
     <circle id="innercenterdot" cx="0" cy="0" r="3" class="markercolour" />
   </g>
 
-  <use id="iconHRM" href="#heart-beat" x="25" y="35" />
+  <use id="iconHRM" href="#heart-beat" x="15" y="45" />
   <text id="txtHRM" class="heartrate" x="25" y="50" />
 
-  <text id="txtBattery" class="battery" x="100%-60" y="50">100</text>
+  <text id="txtBattery" class="battery" x="100%-20" y="50">100</text>
   <text class="battery-percent" x="100%-30" y="65">%</text>
+
+  <text id="txtDate" class="Date" x="50%" y="80%">SUN. 27</text>
 </svg>
