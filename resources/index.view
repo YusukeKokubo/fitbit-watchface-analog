@@ -1,4 +1,4 @@
-<svg viewport-fill="black">
+<svg viewport-fill="black" class="default">
   <defs>
     <symbol id="maindial">
       <g transform="rotate(0)">
@@ -215,4 +215,9 @@
     <circle id="innercenterdot" cx="0" cy="0" r="3" class="markercolour" />
   </g>
 
+  <use id="iconHRM" href="#heart-beat" x="25" y="35" />
+  <text id="txtHRM" class="heartrate" x="25" y="50" />
+
+  <text id="txtBattery" class="battery" x="100%-60" y="50">100</text>
+  <text class="battery-percent" x="100%-30" y="65">%</text>
 </svg>

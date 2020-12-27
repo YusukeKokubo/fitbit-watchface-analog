@@ -1,5 +1,7 @@
 import clock from "clock";
 import document from "document";
+import * as simpleHRM from "./simple/hrm";
+import { battery } from "power";
 
 // Tick every second
 clock.granularity = "seconds";
@@ -7,6 +9,12 @@ clock.granularity = "seconds";
 let hourHand = document.getElementById("hours") as GroupElement;
 let minHand = document.getElementById("mins") as GroupElement;
 let secHand = document.getElementById("secs") as GroupElement;
+
+let iconHRM = document.getElementById("iconHRM");
+let imgHRM = iconHRM.getElementById("icon") as ImageElement;
+let txtHRM = document.getElementById("txtHRM") as GraphicsElement;
+
+let textBattery = document.getElementById("txtBattery") as GraphicsElement
 
 // Returns an angle (0-360) for the current hour in the day, including minutes
 function hoursToAngle(hours: number, minutes: number) {
@@ -81,3 +89,20 @@ function rotatePoint(origin: XY, offsets: XY, angle: number) {
     y: Math.round( (sin * dX) + (cos * dY) + origin.y)
   };
 }
+
+function hrmCallback(data) {
+  txtHRM.text = `${data.bpm}`;
+  if (data.zone === "out-of-range") {
+    imgHRM.href = "images/heart_open.png";
+  } else {
+    imgHRM.href = "images/heart_solid.png";
+  }
+  if (data.bpm !== "--") {
+    iconHRM.animate("highlight");
+  }
+}
+simpleHRM.initialize(hrmCallback);
+
+battery.addEventListener('change', (event) => {
+  textBattery.text = `${battery.chargeLevel}`
+})
