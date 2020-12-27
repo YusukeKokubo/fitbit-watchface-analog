@@ -4,6 +4,7 @@ import * as simpleHRM from "./simple/hrm";
 import { battery } from "power";
 import * as util from "./simple/utils";
 import { days} from "./simple/locales/en.js";
+import * as simpleActivity from "./simple/activity";
 
 // Tick every second
 clock.granularity = "seconds";
@@ -18,6 +19,7 @@ let txtHRM = document.getElementById("txtHRM") as GraphicsElement;
 
 let textBattery = document.getElementById("txtBattery") as GraphicsElement
 let textDate = document.getElementById("txtDate") as GraphicsElement
+let textSteps = document.getElementById("txtSteps") as GraphicsElement
 
 // Returns an angle (0-360) for the current hour in the day, including minutes
 function hoursToAngle(hours: number, minutes: number) {
@@ -113,3 +115,9 @@ simpleHRM.initialize(hrmCallback);
 battery.addEventListener('change', (event) => {
   textBattery.text = `${battery.chargeLevel}`
 })
+
+// Activity
+function activityCallback(data) {
+  textSteps.text = `${data.steps.pretty}`
+}
+simpleActivity.initialize("seconds", activityCallback);

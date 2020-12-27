@@ -49,17 +49,31 @@
 }
 
 .battery {
-  font-size: 26;
+  font-size: 24;
   text-length: 2;
   text-anchor: end;
 }
 
 .battery-percent {
-  font-size: 22;
+  font-size: 18;
 }
 
 .Date {
   font-size: 24;
   text-anchor: middle;
   text-length: 6;
+  font-weight: light;
+}
+
+.StepsText {
+  font-size: 18;
+  text-anchor: middle;
+  font-weight: light;
+}
+
+.Steps {
+  font-size: 24;
+  text-anchor: middle;
+  text-length: 6;
+  font-weight: light;
 }
