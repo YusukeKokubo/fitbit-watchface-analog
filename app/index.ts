@@ -78,7 +78,7 @@ for (let i=1; i <= 12; i++) {
   c.y = a.y + 13;
   
   // get the text to show
-  let d = new FitFont({id: c, font: 'Futura_40', halign: 'middle', valign: 'baseline', letterspacing: -5, })
+  let d = new FitFont({id: c, font: 'Jost_40', halign: 'middle', valign: 'baseline', letterspacing: -0, })
   d.text = names[i-1];
 
   console.log(`test-text${i}, ${tmpAngle}, ${names[i-1]}`);
