@@ -229,17 +229,19 @@
   <!-- Clock Face -->
   <g transform="translate(50%,50%)">
     <g id="mins" pointer-events="visible">
-      <line x1="2" y1="16" x2="0" y2="-40%" stroke-width="3" class="markercolour" />
-      <line x1="0" y1="17" x2="0" y2="-40%" stroke-width="3" class="markercolour" />
-      <line x1="-2" y1="16" x2="0" y2="-40%" stroke-width="3" class="markercolour" />
+      <line x1="4" y1="16" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
+      <line x1="2" y1="17" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
+      <line x1="0" y1="17" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
+      <line x1="-2" y1="16" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
     </g>
     <g id="hours" pointer-events="visible">
-      <line x1="2" y1="16" x2="0" y2="-30%" stroke-width="3" class="markercolour" />
-      <line x1="0" y1="17" x2="0" y2="-30%" stroke-width="3" class="markercolour" />
-      <line x1="-2" y1="16" x2="0" y2="-30%" stroke-width="3" class="markercolour" />
+      <line x1="4" y1="16" x2="0" y2="-30%" stroke-width="1" class="markercolour" />
+      <line x1="2" y1="17" x2="0" y2="-30%" stroke-width="1" class="markercolour" />
+      <line x1="0" y1="17" x2="0" y2="-30%" stroke-width="1" class="markercolour" />
+      <line x1="-2" y1="16" x2="0" y2="-30%" stroke-width="1" class="markercolour" />
     </g>
     <g id="secs" pointer-events="visible">
-      <line x1="0" y1="4%" x2="0" y2="-40%" stroke-width="3" class="accentcolour" />
+      <line x1="0" y1="4%" x2="0" y2="-40%" stroke-width="2" class="accentcolour" />
     </g>
     <use href="#maindial" />
     <circle id="outercenterdot" cx="0" cy="0" r="6" class="accentcolour" />
