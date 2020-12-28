@@ -186,18 +186,45 @@
     </symbol>
   </defs>
 
-  <text id="test-text1" class="hourtext markercolour">1</text>
-  <text id="test-text2" class="hourtext markercolour">2</text>
-  <text id="test-text3" class="hourtext markercolour">3</text>
-  <text id="test-text4" class="hourtext markercolour">4</text>
-  <text id="test-text5" class="hourtext markercolour">5</text>
-  <text id="test-text6" class="hourtext markercolour">6</text>
-  <text id="test-text7" class="hourtext markercolour">7</text>
-  <text id="test-text8" class="hourtext markercolour">8</text>
-  <text id="test-text9" class="hourtext markercolour">9</text>
-  <text id="test-text10" class="hourtext markercolour">10</text>
-  <text id="test-text11" class="hourtext markercolour">11</text>
-  <text id="test-text12" class="hourtext markercolour">12</text>
+  <use href="#fitfont" id="test-text1">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text2">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text3">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text4">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text5">
+    <use href="#fitfont-char" />
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text6">
+    <use href="#fitfont-char" />
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text7">
+    <use href="#fitfont-char" />
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text8">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text9">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text10">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text11">
+    <use href="#fitfont-char" />
+  </use>
+  <use href="#fitfont" id="test-text12">
+    <use href="#fitfont-char" />
+  </use>
 
   <!-- Clock Face -->
   <g transform="translate(50%,50%)">

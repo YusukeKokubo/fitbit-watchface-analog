@@ -29,5 +29,8 @@
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit"
+  },
+  "dependencies": {
+    "fitfont": "^1.3.3"
   }
 }

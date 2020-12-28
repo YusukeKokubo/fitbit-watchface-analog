@@ -5,6 +5,7 @@ import { battery } from "power";
 import * as util from "./simple/utils";
 import { days} from "./simple/locales/en.js";
 import * as simpleActivity from "./simple/activity";
+import { FitFont } from 'fitfont'
 
 // Tick every second
 clock.granularity = "seconds";
@@ -73,11 +74,12 @@ for (let i=1; i <= 12; i++) {
   let a = rotatePoint({x: 174, y: 174}, {x: 0, y: 130}, tmpAngle);
 
    // slight adjustment to make sure things are centered...
-  c.x = a.x - 7;
-  c.y = a.y + 7;
+  c.x = a.x - 4;
+  c.y = a.y + 8;
   
   // get the text to show
-  c.text = names[i-1];
+  let d = new FitFont({id: c, font: 'Futura_40', halign: 'middle', letterspacing: -3, })
+  d.text = names[i-1];
 
   console.log(`test-text${i}, ${tmpAngle}, ${names[i-1]}`);
 

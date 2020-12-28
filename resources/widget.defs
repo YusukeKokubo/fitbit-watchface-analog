@@ -11,5 +11,13 @@
           end="unload;unhighlight" to="1.0" repeatCount="indefinite" final="keep" />
       </g>
     </symbol>
+
+    <!-- The symbol for a character -->
+    <symbol id="fitfont-char">
+      <image class="fitfont-char" load="sync" x="0" y="0" />
+    </symbol>
+
+    <!-- The custom font symbol -->
+    <symbol id="fitfont" />
   </defs>
 </svg>
