@@ -71,14 +71,14 @@ for (let i=1; i <= 12; i++) {
 
   // 110 is the distance from the center (150,150) that the text will be placed on
   // the smaller the number, the closed the textboxes will be to the center dot.
-  let a = rotatePoint({x: 174, y: 174}, {x: 0, y: 130}, tmpAngle);
+  let a = rotatePoint({x: 168, y: 168}, {x: 0, y: 127}, tmpAngle);
 
    // slight adjustment to make sure things are centered...
-  c.x = a.x - 4;
-  c.y = a.y + 8;
+  c.x = a.x - 0;
+  c.y = a.y + 13;
   
   // get the text to show
-  let d = new FitFont({id: c, font: 'Futura_40', halign: 'middle', letterspacing: -3, })
+  let d = new FitFont({id: c, font: 'Futura_40', halign: 'middle', valign: 'baseline', letterspacing: -5, })
   d.text = names[i-1];
 
   console.log(`test-text${i}, ${tmpAngle}, ${names[i-1]}`);
