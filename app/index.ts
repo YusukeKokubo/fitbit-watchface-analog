@@ -1,7 +1,7 @@
 import clock from "clock";
+import { battery } from "power";
 import document from "document";
 import * as simpleHRM from "./simple/hrm";
-import { battery } from "power";
 import * as util from "./simple/utils";
 import { days} from "./simple/locales/en.js";
 import * as simpleActivity from "./simple/activity";
@@ -59,7 +59,9 @@ function updateClock() {
 clock.addEventListener("tick", updateClock);
 
 
+// *********************
 // copied from https://community.fitbit.com/t5/SDK-Development/Find-resulting-x-and-y-of-rotated-text/td-p/2780005#
+// *********************
 let names = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5'];
 
 // Angle to place each of the above textboxes.  6 o'clock is at 0-degrees, the rest are at 30-degree increments
@@ -86,7 +88,6 @@ for (let i=1; i <= 12; i++) {
   tmpAngle += 30;  
 }
 
-// ----------------------------------------
 type XY = {x: number, y: number}
 function rotatePoint(origin: XY, offsets: XY, angle: number) {
   let radians = angle * Math.PI / 180.0;
@@ -100,6 +101,7 @@ function rotatePoint(origin: XY, offsets: XY, angle: number) {
     y: Math.round( (sin * dX) + (cos * dY) + origin.y)
   };
 }
+// *********************
 
 function hrmCallback(data) {
   txtHRM.text = `${data.bpm}`;
