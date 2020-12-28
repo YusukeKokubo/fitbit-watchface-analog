@@ -482,6 +482,11 @@
   "resolved" "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz"
   "version" "0.0.39"
 
+"@types/fitfont@^1.3.0":
+  "integrity" "sha512-qvbSohk8TjtA6OQNKsozu69x6zcfn83pNnYygmvX+fzZvyefegrQoB0tNOgRopbivdkxdRy66+5bDPcZXbo5Gg=="
+  "resolved" "https://registry.npmjs.org/@types/fitfont/-/fitfont-1.3.0.tgz"
+  "version" "1.3.0"
+
 "@types/jquery@^3.5.1":
   "integrity" "sha512-6RXU9Xzpc6vxNrS6FPPapN1SxSHgQ336WC6Jj/N8q30OiaBZ00l1GBgeP7usjVZPivSkGUfL1z/WW6TX989M+w=="
   "resolved" "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.5.tgz"
