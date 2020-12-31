@@ -22,6 +22,8 @@ let textBattery = document.getElementById("txtBattery") as GraphicsElement;
 let textDate = document.getElementById("txtDate") as GraphicsElement;
 let textSteps = document.getElementById("txtSteps") as GraphicsElement;
 
+let imgLogo = document.getElementById("logo") as ImageElement;
+
 // Returns an angle (0-360) for the current hour in the day, including minutes
 function hoursToAngle(hours: number, minutes: number) {
   let hourAngle = (360 / 12) * hours;
@@ -46,13 +48,19 @@ function updateClock() {
   let mins = today.getMinutes();
   let secs = today.getSeconds();
 
-  hourHand.groupTransform.rotate.angle = hoursToAngle(hours, mins);
-  minHand.groupTransform.rotate.angle = minutesToAngle(mins);
-  secHand.groupTransform.rotate.angle = secondsToAngle(secs);
+  let hoursAngle = hoursToAngle(hours, mins);
+  let minAngle = minutesToAngle(mins);
+  let secAngle = secondsToAngle(secs);
+  hourHand.groupTransform.rotate.angle = hoursAngle;
+  minHand.groupTransform.rotate.angle = minAngle;
+  secHand.groupTransform.rotate.angle = secAngle;
 
   let dayName = days[today.getDay()];
   let dayNumber = util.zeroPad(today.getDate());
   textDate.text = `${dayName} ${dayNumber}`;
+
+  imgLogo.animate("highlight");
+  imgLogo.x = 300 - secs * 6;
 }
 
 // Update the clock every tick event

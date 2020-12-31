@@ -58,13 +58,6 @@
   font-size: 18;
 }
 
-.Date {
-  font-size: 24;
-  text-anchor: middle;
-  text-length: 6;
-  font-weight: light;
-}
-
 .StepsText {
   font-size: 18;
   text-anchor: middle;
@@ -76,4 +69,20 @@
   text-anchor: middle;
   text-length: 6;
   font-weight: light;
+}
+
+.Date {
+  font-size: 24;
+  text-anchor: middle;
+  text-length: 6;
+  font-weight: light;
+  x: 50%;
+  y: 100%-73;
+}
+
+#logo {
+  x: 0;
+  y: 100%-120;
+  width: 40;
+  height: 20;
 }
