@@ -6,6 +6,8 @@ import * as util from "./simple/utils";
 import { days } from "./simple/locales/en.js";
 import * as simpleActivity from "./simple/activity";
 import { FitFont } from "fitfont";
+import { display } from "display";
+import {me} from "appbit"
 
 // Tick every second
 clock.granularity = "seconds";
@@ -14,6 +16,9 @@ let hourHand = document.getElementById("hours") as GroupElement;
 let minHand = document.getElementById("mins") as GroupElement;
 let secHand = document.getElementById("secs") as GroupElement;
 
+let outercenterdot = document.getElementById("outercenterdot") as GroupElement;
+let innercenterdot = document.getElementById("innercenterdot") as GroupElement;
+
 let iconHRM = document.getElementById("iconHRM");
 let imgHRM = iconHRM.getElementById("icon") as ImageElement;
 let txtHRM = document.getElementById("txtHRM") as GraphicsElement;
@@ -21,6 +26,9 @@ let txtHRM = document.getElementById("txtHRM") as GraphicsElement;
 let textBattery = document.getElementById("txtBattery") as GraphicsElement;
 let textDate = document.getElementById("txtDate") as GraphicsElement;
 let textSteps = document.getElementById("txtSteps") as GraphicsElement;
+
+let textBatteryPercenet = document.getElementById("txtBatteryPercent") as GraphicsElement;
+let textStepsText = document.getElementById("txtStepsText") as GraphicsElement;
 
 let imgLogo = document.getElementById("logo") as ImageElement;
 
@@ -96,7 +104,7 @@ for (let i = 1; i <= 12; i++) {
   });
   d.text = names[i - 1];
 
-  console.log(`test-text${i}, ${tmpAngle}, ${names[i - 1]}`);
+  // console.log(`test-text${i}, ${tmpAngle}, ${names[i - 1]}`);
 
   tmpAngle += 30;
 }
@@ -138,3 +146,38 @@ function activityCallback(data) {
   textSteps.text = `${data.steps.pretty}`;
 }
 simpleActivity.initialize("seconds", activityCallback);
+
+if (display.aodAvailable && me.permissions.granted("access_aod")) {
+  display.aodAllowed = true
+  
+  display.addEventListener("change", () => {
+    console.log("aod active: ", display.aodActive)
+    if (!display.aodActive && display.on) {
+      simpleHRM.start()
+      clock.granularity = "seconds";
+      outercenterdot.style.display = 'inline'
+      innercenterdot.style.display = 'inline'
+      imgLogo.style.display = 'inline'
+      secHand.style.display = 'inline'
+      imgHRM.style.display = 'inline'
+      txtHRM.style.display = 'inline'
+      textSteps.style.display = 'inline'
+      textBattery.style.display = 'inline'
+      textBatteryPercenet.style.display = 'inline'
+      textStepsText.style.display = 'inline'
+    } else {
+      simpleHRM.stop()
+      clock.granularity = "minutes";
+      outercenterdot.style.display = 'none'
+      innercenterdot.style.display = 'none'
+      imgLogo.style.display = 'none'
+      secHand.style.display = 'none'
+      imgHRM.style.display = 'none'
+      txtHRM.style.display = 'none'
+      textSteps.style.display = 'none'
+      textBattery.style.display = 'none'
+      textBatteryPercenet.style.display = 'none'
+      textStepsText.style.display = 'none'
+    }
+  })
+}

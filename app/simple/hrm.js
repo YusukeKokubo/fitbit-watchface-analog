@@ -52,7 +52,7 @@ function setupEvents() {
   });
 }
 
-function start() {
+export function start() {
   if (!watchID) {
     hrm.start();
     getReading();
@@ -60,7 +60,7 @@ function start() {
   }
 }
 
-function stop() {
+export function stop() {
   hrm.stop();
   clearInterval(watchID);
   watchID = null;

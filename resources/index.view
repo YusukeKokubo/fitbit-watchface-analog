@@ -252,9 +252,9 @@
   <text id="txtHRM" class="heartrate" x="25" y="50" />
 
   <text id="txtBattery" class="battery" x="100%-20" y="50">100</text>
-  <text class="battery-percent" x="100%-30" y="65">%</text>
+  <text id="txtBatteryPercent" class="battery-percent" x="100%-30" y="65">%</text>
 
-  <text class="StepsText" x="50%" y="25%">STEPS</text>
+  <text id="txtStepsText" class="StepsText" x="50%" y="25%">STEPS</text>
   <text id="txtSteps" class="Steps" x="50%" y="33%">10000</text>
 
   <text id="txtDate" class="Date">SUN. 27</text>
