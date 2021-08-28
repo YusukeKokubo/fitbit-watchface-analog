@@ -7,7 +7,7 @@ import { days } from "./simple/locales/en.js";
 import * as simpleActivity from "./simple/activity";
 import { FitFont } from "fitfont";
 import { display } from "display";
-import {me} from "appbit"
+import { me } from "appbit"
 
 // Tick every second
 clock.granularity = "seconds";
@@ -149,7 +149,7 @@ simpleActivity.initialize("seconds", activityCallback);
 
 if (display.aodAvailable && me.permissions.granted("access_aod")) {
   display.aodAllowed = true
-  
+
   display.addEventListener("change", () => {
     console.log("aod active: ", display.aodActive)
     if (!display.aodActive && display.on) {
