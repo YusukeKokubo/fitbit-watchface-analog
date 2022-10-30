@@ -186,7 +186,8 @@
     </symbol>
   </defs>
 
-  <text id="txtPhantomType" class="PhantomTypeText" x="50%" y="60%">PHANTOM TYPE</text>
+  <text id="txtPhantomType" class="PhantomTypeText" x="45%" y="60%">PHANTOM TYPE
+  </text>
   <use id="logo" href="#logomark" />
 
   <use href="#fitfont" id="test-text1">
