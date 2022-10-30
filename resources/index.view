@@ -186,6 +186,9 @@
     </symbol>
   </defs>
 
+  <text id="txtPhantomType" class="PhantomTypeText" x="50%" y="60%">PHANTOM TYPE</text>
+  <use id="logo" href="#logomark" />
+
   <use href="#fitfont" id="test-text1">
     <use href="#fitfont-char" />
   </use>
@@ -258,5 +261,4 @@
   <text id="txtSteps" class="Steps" x="50%" y="33%">10000</text>
 
   <text id="txtDate" class="Date">SUN. 27</text>
-  <use id="logo" href="#logomark" />
 </svg>

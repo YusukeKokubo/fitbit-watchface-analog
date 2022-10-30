@@ -67,8 +67,10 @@ function updateClock() {
   let dayNumber = util.zeroPad(today.getDate());
   textDate.text = `${dayName} ${dayNumber}`;
 
-  imgLogo.animate("highlight");
-  imgLogo.x = 300 - secs * 6;
+  // imgLogo.animate("highlight");
+  // imgLogo.x = 300 - secs * 6;
+  // imgLogo.x = 255
+  // imgLogo.y = 260
 }
 
 // Update the clock every tick event

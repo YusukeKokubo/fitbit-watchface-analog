@@ -80,9 +80,18 @@
   y: 100%-73;
 }
 
+.PhantomTypeText {
+  font-size: 18;
+  text-anchor: middle;
+  text-length: 12;
+  font-weight: light;
+  fill: gray;
+}
+
 #logo {
-  x: 0;
+  x: 50%;
   y: 100%-120;
   width: 40;
   height: 20;
+  fill: gray;
 }
