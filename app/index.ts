@@ -144,6 +144,11 @@ simpleHRM.initialize(hrmCallback)
 battery.addEventListener("change", (event) => {
   textBattery.text = `${battery.chargeLevel}`
 })
+display.onchange = () => {
+  if (display.on) {
+    textBattery.text = `${battery.chargeLevel}`
+  }
+}
 
 // Activity
 function activityCallback(data) {
