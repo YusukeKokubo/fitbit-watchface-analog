@@ -8,10 +8,13 @@ import { HeartRateSensor } from "heart-rate"
 import { user } from "user-profile"
 
 let hrm: HeartRateSensor
-let watchID: number
-let hrmCallback
+let hrmCallback: (data: {
+  bpm: string
+  zone: string
+  restingHeartRate: string
+}) => void
 let lastReading = 0
-let heartRate
+let heartRate: string
 
 export function initialize(callback) {
   if (
@@ -38,17 +41,20 @@ function getReading() {
   if (hrm.timestamp === lastReading) {
     heartRate = "--"
   } else {
-    heartRate = hrm.heartRate
+    heartRate = String(hrm.heartRate)
   }
   lastReading = hrm.timestamp
   hrmCallback({
     bpm: heartRate,
     zone: user.heartRateZone(hrm.heartRate || 0),
-    restingHeartRate: user.restingHeartRate,
+    restingHeartRate: String(user.restingHeartRate || 0),
   })
 }
 
 function setupEvents() {
+  hrm.onreading = () => {
+    getReading()
+  }
   display.addEventListener("change", function () {
     if (display.on) {
       start()
@@ -59,15 +65,10 @@ function setupEvents() {
 }
 
 export function start() {
-  if (!watchID) {
-    hrm.start()
-    getReading()
-    watchID = setInterval(getReading, 1000)
-  }
+  hrm.start()
+  getReading()
 }
 
 export function stop() {
   hrm.stop()
-  clearInterval(watchID)
-  watchID = null
 }
